@@ -1,23 +1,11 @@
 /*----------------------------------------------------------------------------*/
 /*                                                                            */
 /*    Module:       main.cpp                                                  */
-/*    Author:       C:\Users\Jess                                             */
-/*    Created:      Mon Jul 12 2021                                           */
+/*    Author:       Russel Janairo                                            */
 /*    Description:  V5 project                                                */
 /*                                                                            */
 /*----------------------------------------------------------------------------*/
-// ---- START VEXCODE CONFIGURED DEVICES ----
-// Robot Configuration:
-// [Name]               [Type]        [Port(s)]
-// rf                   motor         16              
-// rb                   motor         17              
-// lf                   motor         18              
-// lb                   motor         19              
-// Controller1          controller                    
-// tilter               motor         12              
-// mogo                 motor         15              
-// lift                 motor         6               
-// ---- END VEXCODE CONFIGURED DEVICES ----
+
 
 
 
