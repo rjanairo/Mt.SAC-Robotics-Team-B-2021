@@ -30,7 +30,6 @@
     SetMotorTimeout(0);
 
   }
-//
 
 //Rotate Robot clockwise a specified degree rotation in Degrees
   void PointTurnClockwise(float ThetaDegree, int SpeedPct, int TimeoutSec){
