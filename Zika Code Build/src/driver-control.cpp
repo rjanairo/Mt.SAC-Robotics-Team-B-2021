@@ -5,7 +5,6 @@
 using namespace vex;
 
 //defining functions from header files
-
 void DriveArcade(){
 
   if(abs(Controller1.Axis3.value()) > 5 || abs(Controller1.Axis1.value()) > 5){
@@ -22,7 +21,6 @@ void DriveArcade(){
   }
 
 }
-
 void DriveTank(){
    if( abs( Controller1.Axis2.value() ) > 5 && abs( Controller1.Axis3.value() ) > 5 ){
      LeftDrive.spin(forward,Controller1.Axis3.value(), pct);
@@ -33,7 +31,6 @@ void DriveTank(){
    }
 
  }
-
 void LiftControl(){
   if(Controller1.ButtonR1.pressing()){
     liftA.spin(reverse,100, pct);
