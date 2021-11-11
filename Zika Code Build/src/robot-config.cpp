@@ -11,13 +11,13 @@ using namespace vex;
 //
 
 //drivetrain motors
-motor leftMotorA = motor(PORT1, ratio18_1, true);
-motor leftMotorB = motor(PORT2, ratio18_1, true);
-motor leftMotorC = motor(PORT3, ratio18_1, false);
+motor leftMotorA = motor(PORT1, ratio18_1, false);
+motor leftMotorB = motor(PORT2, ratio18_1, false);
+motor leftMotorC = motor(PORT3, ratio18_1, true);
 
-motor rightMotorA = motor(PORT10, ratio18_1, false);
-motor rightMotorB = motor(PORT9, ratio18_1, false);
-motor rightMotorC = motor(PORT8, ratio18_1, true);
+motor rightMotorA = motor(PORT10, ratio18_1, true);
+motor rightMotorB = motor(PORT9, ratio18_1, true);
+motor rightMotorC = motor(PORT8, ratio18_1, false);
 //
 
 //Motor Groups
