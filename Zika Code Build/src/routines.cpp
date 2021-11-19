@@ -1,14 +1,10 @@
 #include "routines.h"
 #include "autonomous-functions.h"
 
-void RoutineOne(){ //boolean switch, forward = reverse and reverse = forward (inverted variable naming)
-  MoveReverse(100, 50, 10);
-  wait(800, msec);
-  PointTurnCounterClockwise(100, 20, 5);
+void RoutineOne(){ //Auton Arm back included, bot needs to face backwards
+  MoveReverse(51, 80, 5);
   wait(300, msec);
-  MoveReverse(30, 20, 6);
-  wait(800, msec);
-  PointTurnCounterClockwise(100, 20, 5);
+  IntakeControl(90, 90.5);
   wait(300,  msec);
-  MoveReverse(100, 50, 10);
+  Movefoward(50.5, 100, 3);
 }
