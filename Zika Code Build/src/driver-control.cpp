@@ -5,17 +5,11 @@
 using namespace vex;
 
 //defining functions from header files
-
 void DriveArcade(){
 
   if(abs(Controller1.Axis3.value()) > 5 || abs(Controller1.Axis1.value()) > 5){
-
-    LeftDrive.setVelocity(( -Controller1.Axis3.value() + Controller1.Axis1.value() ) , percent);
-    LeftDrive.spin(reverse);
-
-    RightDrive.setVelocity(( -Controller1.Axis3.value() - Controller1.Axis1.value() ) , percent);
-    RightDrive.spin(reverse);
-
+    LeftDrive.spin(forward, ( Controller1.Axis3.value() + Controller1.Axis1.value() )/2 , pct);
+    RightDrive.spin(forward, ( Controller1.Axis3.value() - Controller1.Axis1.value() )/2 , pct);
   } else {
     LeftDrive.stop();
     RightDrive.stop();
