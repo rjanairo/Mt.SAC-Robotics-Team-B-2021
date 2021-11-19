@@ -1,11 +1,3 @@
-/*----------------------------------------------------------------------------*/
-/*                                                                            */
-/*    Module:       main.cpp                                                  */
-/*    Author:       Russel Janairo                                            */
-/*    Description:  V5 project                                                */
-/*                                                                            */
-/*----------------------------------------------------------------------------*/
-
 #include "vex.h"
 #include "driver-control.h"
 #include "routines.h"
@@ -16,7 +8,8 @@ using namespace vex;
 void Usercontrol(){
   while(1){
     DriveArcade();
-    LiftControl();
+    IntakeControl();
+    //LiftControl();
     //wait to save resources
     wait(10,msec);
   }
