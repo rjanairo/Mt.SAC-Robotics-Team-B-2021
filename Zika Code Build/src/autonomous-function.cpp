@@ -17,7 +17,7 @@
 
     SetMotorTimeout(0);
   }
-//
+
 
 
 // Drive Reverse with a specified distance in Centimeters
@@ -30,6 +30,7 @@
     SetMotorTimeout(0);
 
   }
+//
 
 //Rotate Robot clockwise a specified degree rotation in Degrees
   void PointTurnClockwise(float ThetaDegree, int SpeedPct, int TimeoutSec){
@@ -53,8 +54,9 @@
   SetMotorTimeout(0);
   }
 //
-
-
+ void IntakeControl(int intakeDegree, int intakeVelocity){
+  IntakeMotor.spinTo(intakeDegree, rotationUnits::deg , intakeVelocity, velocityUnits::pct, true);
+ }
 //Stop all motors
 void DriveStop(){
   LeftDrive.stop(hold);
