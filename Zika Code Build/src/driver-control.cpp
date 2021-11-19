@@ -5,7 +5,7 @@
 using namespace vex;
 
 //defining functions from header files
-void DriveArcade(){
+void DriveArcade(){ //new driver train 11/19/2021
 
   if(abs(Controller1.Axis3.value()) > 5 || abs(Controller1.Axis1.value()) > 5){
     LeftDrive.spin(forward, ( Controller1.Axis3.value() + Controller1.Axis1.value() )/2 , pct);
