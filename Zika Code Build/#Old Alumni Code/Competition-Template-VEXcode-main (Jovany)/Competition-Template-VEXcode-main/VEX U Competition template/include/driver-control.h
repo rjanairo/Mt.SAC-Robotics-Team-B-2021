@@ -22,6 +22,9 @@ void ClawControl();
 
 void ArmControl();
 
+//void LiftControl();
+void IntakeControl();
+
 
 
 #endif
