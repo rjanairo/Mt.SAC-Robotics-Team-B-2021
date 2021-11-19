@@ -11,13 +11,13 @@ using namespace vex;
 //
 
 //drivetrain motors
-motor leftMotorA = motor(PORT1, ratio18_1, false);
-motor leftMotorB = motor(PORT2, ratio18_1, false);
-motor leftMotorC = motor(PORT3, ratio18_1, true);
+motor leftMotorA = motor(PORT17, ratio18_1, true);
+motor leftMotorB = motor(PORT18, ratio18_1, true);
+motor leftMotorC = motor(PORT19, ratio18_1, false);
 
-motor rightMotorA = motor(PORT10, ratio18_1, true);
-motor rightMotorB = motor(PORT9, ratio18_1, true);
-motor rightMotorC = motor(PORT8, ratio18_1, false);
+motor rightMotorA = motor(PORT11, ratio18_1, false);
+motor rightMotorB = motor(PORT12, ratio18_1, false);
+motor rightMotorC = motor(PORT13, ratio18_1, true);
 //
 
 //Motor Groups
@@ -29,10 +29,12 @@ motor rightMotorC = motor(PORT8, ratio18_1, false);
   drivetrain Drivetrain = drivetrain(LeftDrive, RightDrive,319.19, 320, 130, mm, 1);
 //
 
+//IntakeMotor
+ motor IntakeMotor = motor(PORT1, ratio18_1,true);
 
 //LIft
-   motor liftA = motor(PORT12, ratio18_1, true);
-   motor liftB = motor(PORT13, ratio18_1, false);
+   //motor liftA = motor(PORT1, ratio18_1, true);
+   //motor liftB = motor(PORT2, ratio18_1, false);
 
 // Global Variables(begein with g_ prefix)
   const float g_wheelBase = 0; // [cm] Distance between axles of two wheels on the left or right side of base
