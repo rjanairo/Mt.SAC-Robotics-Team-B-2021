@@ -11,25 +11,30 @@ using namespace vex;
 //
 
 //drivetrain motors
- motor motor_FrontLeft = motor(PORT11, ratio18_1, false);
- motor motor_BackLeft = motor(PORT10, ratio18_1, false);
- motor motor_FrontRight = motor(PORT13, ratio18_1, true);
- motor motor_BackRight = motor(PORT1, ratio18_1, true);
+motor leftMotorA = motor(PORT17, ratio18_1, true);
+motor leftMotorB = motor(PORT18, ratio18_1, true);
+motor leftMotorC = motor(PORT19, ratio18_1, false);
+
+motor rightMotorA = motor(PORT11, ratio18_1, false);
+motor rightMotorB = motor(PORT12, ratio18_1, false);
+motor rightMotorC = motor(PORT13, ratio18_1, true);
 //
 
 //Motor Groups
-  motor_group LeftDrive = motor_group(motor_FrontLeft, motor_BackLeft);
-  motor_group RightDrive = motor_group(motor_BackRight, motor_FrontRight);
+  motor_group LeftDrive = motor_group(leftMotorA, leftMotorB, leftMotorC);
+  motor_group RightDrive = motor_group(rightMotorA, rightMotorB,rightMotorC);
 //
 
 //Drivetrain 
   drivetrain Drivetrain = drivetrain(LeftDrive, RightDrive,319.19, 320, 130, mm, 1);
 //
 
-//Other Motors - Mechanisms
-  motor ClawMotor = motor(PORT3, ratio18_1, false);
-  motor ArmMotor = motor(PORT8, ratio18_1, false);
-//
+//IntakeMotor
+ motor IntakeMotor = motor(PORT1, ratio18_1,true);
+
+//LIft
+   //motor liftA = motor(PORT1, ratio18_1, true);
+   motor liftB = motor(PORT2, ratio18_1, false);
 
 // Global Variables(begein with g_ prefix)
   const float g_wheelBase = 0; // [cm] Distance between axles of two wheels on the left or right side of base
@@ -55,4 +60,3 @@ void vexcodeInit(void) {
   Brain.Screen.drawRectangle(0, 0, 200, 200);
   Brain.Screen.setFillColor(green);
 }
-
