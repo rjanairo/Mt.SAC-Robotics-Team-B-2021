@@ -5,14 +5,15 @@
 using namespace vex;
 
 //defining functions from header files
+
 void DriveArcade(){
 
   if(abs(Controller1.Axis3.value()) > 5 || abs(Controller1.Axis1.value()) > 5){
 
-    LeftDrive.setVelocity(( Controller1.Axis3.value() + Controller1.Axis1.value() ) , percent);
+    LeftDrive.setVelocity(( -Controller1.Axis3.value() + Controller1.Axis1.value() ) , percent);
     LeftDrive.spin(reverse);
 
-    RightDrive.setVelocity(( Controller1.Axis3.value() - Controller1.Axis1.value() ) , percent);
+    RightDrive.setVelocity(( -Controller1.Axis3.value() - Controller1.Axis1.value() ) , percent);
     RightDrive.spin(reverse);
 
   } else {
@@ -21,6 +22,7 @@ void DriveArcade(){
   }
 
 }
+
 void DriveTank(){
    if( abs( Controller1.Axis2.value() ) > 5 && abs( Controller1.Axis3.value() ) > 5 ){
      LeftDrive.spin(forward,Controller1.Axis3.value(), pct);
@@ -31,18 +33,31 @@ void DriveTank(){
    }
 
  }
-void LiftControl(){
-  if(Controller1.ButtonR1.pressing()){
-    liftA.spin(reverse,100, pct);
-    liftB.spin(reverse,100, pct);
-  }else if(Controller1.ButtonR2.pressing()){
-    liftA.spin(forward,100, pct);
-    liftB.spin(forward,100, pct);
-  }else{
-    liftA.stop(hold);
-    liftB.stop(hold);
+
+void IntakeControl(){
+  if(Controller1.ButtonL2.pressing()){
+    IntakeMotor.spin(forward, 70, pct);
+  }else if(Controller1.ButtonL1.pressing()){
+    IntakeMotor.spin(reverse, 70, pct);
   }
-}
+  else{
+    IntakeMotor.stop(hold);
+  }
+} 
+  
+//void LiftControl(){
+  //if(Controller1.ButtonR1.pressing()){
+    //liftA.spin(reverse,100, pct);
+    //liftB.spin(reverse,100, pct);
+  //}else if(Controller1.ButtonR2.pressing()){
+    //liftA.spin(forward,100, pct);
+    //liftB.spin(forward,100, pct);
+  //}else{
+    //liftA.stop(hold);
+    //liftB.stop(hold);
+  //}
+//}
+
 
 void DriveXDrive(){
 
@@ -61,5 +76,4 @@ void DriveXDrive(){
     RightDrive.stop();
     RightDrive.stop();
   }
-  
 }
