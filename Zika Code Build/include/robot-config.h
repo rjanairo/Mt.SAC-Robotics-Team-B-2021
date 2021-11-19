@@ -22,6 +22,8 @@ extern motor rightMotorC;
 extern motor liftA;
 extern motor liftB;
 
+extern motor IntakeMotor;
+
 //Motor Groups
 extern motor_group LeftDrive;
 extern motor_group RightDrive;
