@@ -11,12 +11,18 @@ extern motor ClawMotor;
 extern motor ArmMotor;
 
 //drivetrain motors
-extern motor motor_FrontLeft;
-extern motor motor_BackLeft;
+extern motor leftMotorA;
+extern motor leftMotorB;
+extern motor leftMotorC;
 
-extern motor motor_FrontRight;
-extern motor motor_BackRight;
+extern motor rightMotorA;
+extern motor rightMotorB;
+extern motor rightMotorC;
 
+extern motor liftA;
+extern motor liftB;
+
+extern motor IntakeMotor;
 
 //Motor Groups
 extern motor_group LeftDrive;
