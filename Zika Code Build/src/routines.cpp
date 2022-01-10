@@ -2,9 +2,10 @@
 #include "autonomous-functions.h"
 
 void RoutineOne(){ //Auton Arm back included, bot needs to face backwards
-  MoveReverse(125, 50, 10); //bot moves from backwards assuming the arm is still in backside
+  intakeAuton(90, 91);//clawFangControl(90,91);
+  Movefoward(51, 80, 5); //(51, 80, 5);
   wait(300, msec);
-  IntakeControl(90, 90.5); //arm close down to take the mobile goal
+  clawFangAuton(90, 91);//IntakeControl(90, 91);
   wait(300,  msec);
-  Movefoward(125, 50, 10); //bot returns back to the starting point
+  //MoveReverse(50.5, 100, 3); //(50.5, 100, 3);
 }
