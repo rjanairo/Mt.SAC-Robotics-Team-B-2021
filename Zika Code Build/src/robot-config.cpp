@@ -30,8 +30,11 @@ motor rightMotorC = motor(PORT13, ratio18_1, true);
 //
 
 //IntakeMotor
- motor IntakeMotor = motor(PORT1, ratio18_1,true);
+ motor IntakeMotorA = motor(PORT1, ratio18_1,false);
+ motor IntakeMotorB = motor(PORT2, ratio18_1, true);
 
+//Claw Fang
+ motor clawFang = motor(PORT6, ratio36_1, false);
 //LIft
    //motor liftA = motor(PORT1, ratio18_1, true);
    //motor liftB = motor(PORT2, ratio18_1, false);
