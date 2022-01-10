@@ -4,12 +4,13 @@
 
 using namespace vex;
 
-
 void Usercontrol(){
   while(1){
     DriveArcade();
     IntakeControl();
+    clawFangControl();
     //LiftControl();
+
     //wait to save resources
     wait(10,msec);
   }
