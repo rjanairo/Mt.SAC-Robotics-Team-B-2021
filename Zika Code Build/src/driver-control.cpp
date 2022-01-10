@@ -5,23 +5,24 @@
 using namespace vex;
 
 //defining functions from header files
-void DriveArcade(){ //new driver train 11/19/2021
+void DriveArcade(){
 
   if(abs(Controller1.Axis3.value()) > 5 || abs(Controller1.Axis1.value()) > 5){
     LeftDrive.spin(forward, ( Controller1.Axis3.value() + Controller1.Axis1.value() )/2 , pct);
     RightDrive.spin(forward, ( Controller1.Axis3.value() - Controller1.Axis1.value() )/2 , pct);
-  } else {
+  } 
+  else{
     LeftDrive.stop();
     RightDrive.stop();
   }
-
 }
 
 void DriveTank(){
    if( abs( Controller1.Axis2.value() ) > 5 && abs( Controller1.Axis3.value() ) > 5 ){
      LeftDrive.spin(forward,Controller1.Axis3.value(), pct);
      RightDrive.spin(forward, Controller1.Axis2.value(),pct);
-   } else {
+   } 
+   else{
      LeftDrive.stop();
      RightDrive.stop();
    }
@@ -29,16 +30,31 @@ void DriveTank(){
  }
 
 void IntakeControl(){
-  if(Controller1.ButtonL2.pressing()){
-    IntakeMotor.spin(forward, 70, pct);
-  }else if(Controller1.ButtonL1.pressing()){
-    IntakeMotor.spin(reverse, 70, pct);
+  if(Controller1.ButtonL1.pressing()){
+    IntakeMotorA.spin(forward, 70, pct);
+    IntakeMotorB.spin(forward, 70, pct);
+  }else if(Controller1.ButtonL2.pressing()){
+    IntakeMotorA.spin(reverse, 70, pct);
+    IntakeMotorB.spin(reverse, 70, pct);
   }
   else{
-    IntakeMotor.stop(hold);
+    IntakeMotorA.stop(hold);
+    IntakeMotorB.stop(hold);
   }
 } 
-  
+
+void clawFangControl(){
+  if(Controller1.ButtonR1.pressing()){
+    clawFang.spin(forward);
+  }
+  else if(Controller1.ButtonR2.pressing())
+    {
+    clawFang.spin(reverse);
+  }
+  else {
+    clawFang.stop(hold);    
+  }
+}
 //void LiftControl(){
   //if(Controller1.ButtonR1.pressing()){
     //liftA.spin(reverse,100, pct);
