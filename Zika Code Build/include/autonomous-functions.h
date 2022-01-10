@@ -21,7 +21,9 @@
   //Rotate Robot Counter clockwise a specified degree rotation in Degrees
   void PointTurnCounterClockwise(float ThetaDegree, int SpeedPct, int TimeoutSec);
 
-  void IntakeControl(int intakeDegree, int intakeVelocity);
+  void intakeAuton(int intakeDegree, int intakeVelocity);
+
+  void clawFangAuton(int intakeDegree, int intakeVelocity);
 
   //Stop all motors
   void DriveStop();
