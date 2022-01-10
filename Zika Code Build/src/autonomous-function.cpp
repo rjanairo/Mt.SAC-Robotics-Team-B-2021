@@ -18,8 +18,6 @@
     SetMotorTimeout(0);
   }
 
-
-
 // Drive Reverse with a specified distance in Centimeters
   void MoveReverse(float DistancecCM, int SpeedPct, int TimeoutSec){
     SetMotorTimeout(TimeoutSec);
@@ -54,9 +52,11 @@
   SetMotorTimeout(0);
   }
 //
- void IntakeControl(int intakeDegree, int intakeVelocity){
-  IntakeMotor.spinTo(intakeDegree, rotationUnits::deg , intakeVelocity, velocityUnits::pct, true);
+ void intakeAuton(int intakeDegree, int intakeVelocity){
+  IntakeMotorA.spinTo(intakeDegree, rotationUnits::deg , intakeVelocity, velocityUnits::pct, true);
+  IntakeMotorB.spinTo(intakeDegree, rotationUnits::deg , intakeVelocity, velocityUnits::pct, true);
  }
+ void clawFangAuton()
 //Stop all motors
 void DriveStop(){
   LeftDrive.stop(hold);
