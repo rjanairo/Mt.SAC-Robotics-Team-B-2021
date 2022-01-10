@@ -25,6 +25,6 @@ void ArmControl();
 //void LiftControl();
 void IntakeControl();
 
-
+void clawFangControl();
 
 #endif
