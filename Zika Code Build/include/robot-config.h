@@ -22,12 +22,15 @@ extern motor rightMotorC;
 extern motor liftA;
 extern motor liftB;
 
-extern motor IntakeMotor;
+extern motor IntakeMotorA;
+extern motor IntakeMotorB;
 
 //Motor Groups
 extern motor_group LeftDrive;
 extern motor_group RightDrive;
 
+//Claw Fang 
+extern motor clawFang;
 //sensor declarations
 extern gyro myGyro;
 
