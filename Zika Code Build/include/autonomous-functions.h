@@ -23,7 +23,7 @@
 
   void intakeAuton(int intakeDegree, int intakeVelocity);
 
-  void clawFangAuton(int intakeDegree, int intakeVelocity);
+  void clawFangAuton(int clawFangDegree, float clawFangVelocity);
 
   //Stop all motors
   void DriveStop();
