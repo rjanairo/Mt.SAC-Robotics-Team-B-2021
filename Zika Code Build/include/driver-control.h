@@ -19,10 +19,8 @@ void DriveXDrive();
 //Driver control function for moving motor [insert name]
 void ClawControl();
 
-
 void ArmControl();
 
-//void LiftControl();
 void IntakeControl();
 
 void clawFangControl();
