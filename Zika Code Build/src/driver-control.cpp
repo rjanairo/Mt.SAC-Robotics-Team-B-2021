@@ -30,10 +30,10 @@ void DriveTank(){
  }
 
 void IntakeControl(){
-  if(Controller1.ButtonL1.pressing()){
+  if(Controller1.ButtonR1.pressing()){
     IntakeMotorA.spin(forward, 70, pct);
     IntakeMotorB.spin(forward, 70, pct);
-  }else if(Controller1.ButtonL2.pressing()){
+  }else if(Controller1.ButtonR2.pressing()){
     IntakeMotorA.spin(reverse, 70, pct);
     IntakeMotorB.spin(reverse, 70, pct);
   }
@@ -44,10 +44,10 @@ void IntakeControl(){
 } 
 
 void clawFangControl(){
-  if(Controller1.ButtonR1.pressing()){
+  if(Controller1.ButtonL1.pressing()){
     clawFangMotor.spin(forward);
   }
-  else if(Controller1.ButtonR2.pressing())
+  else if(Controller1.ButtonL2.pressing())
     {
     clawFangMotor.spin(reverse);
   }
