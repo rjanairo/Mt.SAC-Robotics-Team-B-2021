@@ -55,8 +55,10 @@
   IntakeMotorA.spinTo(intakeDegree, rotationUnits::deg , intakeVelocity, velocityUnits::pct, true);
   IntakeMotorB.spinTo(intakeDegree, rotationUnits::deg , intakeVelocity, velocityUnits::pct, true);
  }
- void clawFangAuton(); //Not Finished
 
+ void clawFangAuton(int clawFangDegree, float clawFangVelocity){
+    clawFangMotor.spinTo(clawFangDegree, rotationUnits::deg, clawFangVelocity, velocityUnits::pct, true);
+ } 
 
 
 //Stop all motors
