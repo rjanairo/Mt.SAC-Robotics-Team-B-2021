@@ -9,7 +9,6 @@ void Usercontrol(){
     DriveArcade();
     IntakeControl();
     clawFangControl();
-    //LiftControl();
 
     //wait to save resources
     wait(10,msec);
@@ -28,6 +27,5 @@ int main() {
  
   Competition.drivercontrol(Usercontrol);
   Competition.autonomous(Autonomous);
-
 
 }
