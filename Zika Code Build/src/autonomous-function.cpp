@@ -6,7 +6,6 @@
     LeftDrive.setTimeout(TimeSeconds, sec);
     RightDrive.setTimeout(TimeSeconds, sec);
   }
-//
 
 // Drive Foward with a specified distance in Centimeters
   void Movefoward(float DistancecCM, int SpeedPct, int TimeoutSec){
@@ -56,7 +55,10 @@
   IntakeMotorA.spinTo(intakeDegree, rotationUnits::deg , intakeVelocity, velocityUnits::pct, true);
   IntakeMotorB.spinTo(intakeDegree, rotationUnits::deg , intakeVelocity, velocityUnits::pct, true);
  }
- void clawFangAuton()
+ void clawFangAuton();
+
+
+
 //Stop all motors
 void DriveStop(){
   LeftDrive.stop(hold);
