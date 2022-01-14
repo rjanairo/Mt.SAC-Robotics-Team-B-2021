@@ -30,7 +30,7 @@ extern motor_group LeftDrive;
 extern motor_group RightDrive;
 
 //Claw Fang 
-extern motor clawFang;
+extern motor clawFangMotor;
 //sensor declarations
 extern gyro myGyro;
 
@@ -43,7 +43,6 @@ extern const float g_robotRadius; // [cm]
 extern const float g_wheelDiameter; // [cm]
 extern const float g_wheelCircumference; // [cm]
 extern const float g_driveTrainGearRatio; // [Driven Gear Teeth Count/ Driving Gear Teeth Count]
-
 
 /**
  * Used to initialize code/tasks/devices added using tools in VEXcode Pro.
