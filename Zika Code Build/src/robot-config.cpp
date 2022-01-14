@@ -34,10 +34,7 @@ motor rightMotorC = motor(PORT13, ratio18_1, true);
  motor IntakeMotorB = motor(PORT2, ratio18_1, true);
 
 //Claw Fang
- motor clawFang = motor(PORT6, ratio36_1, false);
-//LIft
-   //motor liftA = motor(PORT1, ratio18_1, true);
-   //motor liftB = motor(PORT2, ratio18_1, false);
+ motor clawFangMotor = motor(PORT6, ratio36_1, false);
 
 // Global Variables(begein with g_ prefix)
   const float g_wheelBase = 0; // [cm] Distance between axles of two wheels on the left or right side of base
