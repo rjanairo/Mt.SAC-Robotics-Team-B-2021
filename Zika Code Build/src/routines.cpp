@@ -9,3 +9,9 @@ void RoutineOne(){ //Auton Arm back included, bot needs to face backwards
   wait(300,  msec);
   //MoveReverse(50.5, 100, 3); //(50.5, 100, 3);
 }
+
+/*
+void RoutineKenta() { // Bot starts backwards in front of circle thing
+  MoveReverse(160, 100, 5); // move "forward" (quickly to get time to go on the scale properly)
+}
+*/
