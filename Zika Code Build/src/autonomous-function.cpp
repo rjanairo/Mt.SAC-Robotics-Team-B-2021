@@ -55,7 +55,7 @@
   IntakeMotorA.spinTo(intakeDegree, rotationUnits::deg , intakeVelocity, velocityUnits::pct, true);
   IntakeMotorB.spinTo(intakeDegree, rotationUnits::deg , intakeVelocity, velocityUnits::pct, true);
  }
- void clawFangAuton();
+ void clawFangAuton(); //Not Finished
 
 
 
